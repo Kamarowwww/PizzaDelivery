@@ -8,12 +8,23 @@
 </head>
 
 <body>
-	<form action="#" class="form">
-		<input type="text" maxlength="20" name="name" placeholder="Имя" />
-		<input type="text" maxlength="20" name="name" placeholder="Фамилия" />
+	<style>
+		input:invalid {
+
+			border-color: #DD2C00;
+
+		}
+	</style>
+	<form action="#" class="form" >
+		<input type="text" maxlength="20" name="name" placeholder="Name" pattern="[A-Z]{1}[a-z]{1,20}" title="must be between  1-20 chars and first big letter" />
+		<br>
+		<input type="text" maxlength="20" name="Surname" placeholder="Surname" pattern="[A-Z]{1}[a-z]{1,20}" />
+		<br>
 		<input type="email" name="email" placeholder="E-Mail" />
-		<input type="number"min=0 max="100" name="growth" placeholder="Ваш возрост" />
-		<button type="submit">Отправить</button>
+		<br>
+		<input type="number" min=1 max="100" name="growth" placeholder="Your age" />
+		<br>
+		<button type="submit">Send</button>
 	</form>
 </body>
 
