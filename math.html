@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Math</title>
+    <!--<link rel="stylesheet" href="index.css">-->
+    <script src="math.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="caption">
+        <h1>Math</h1>
+    </div>
+    <form name="math" action="#" class="form" onsubmit = "return false">
+        <div class="validateInput ">
+            <input type="text"  name="number1" id="number1" placeholder="min" />
+            <input type="text" name="number2" id="number2" placeholder="max" />
+            <input type="text" maxlength="20" name="result1" id="result1" placeholder="equation" />
+            <input type="text" maxlength="20" name="result2" id="result2" placeholder="correct answer" />
+            <input type="text" maxlength="20" name="youranswer" id="youranswer" placeholder="your answer" />
+
+        </div>
+        <select name = "symbol" id="symbol">
+            <option id="+">+</option>
+            <option id="-">-</option>
+            <option id="/">/</option>
+            <option id="*">*</option>
+        </select>
+        <div class="buttonHolder">
+            <button type="Generate"id = "fB" onclick = "event.preventDefault; generate()">Generate</button>
+        </div>
+           <div class="buttonHolder">
+                <button type="Result" id = "fBf" onclick = "event.preventDefault; result();match(); countClicks(); update()">Result</button>
+            </div>
+            <p>You answered correctly <span id='target'></span> time(s).</p>
+            <p>You answered wrong <span id='target1'></span> time(s).</p>
+
+
+    </form>
+</body>
+
+</html>
