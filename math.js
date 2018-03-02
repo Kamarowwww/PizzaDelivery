@@ -13,6 +13,8 @@ function randomInteger(min, max) {
 function generate() {
    var a = document.math.number1.value;
    var b = document.math.number2.value;
+   if (a<b )
+   {
     firstnumber = randomInteger(a, b);
 	secondnumber = randomInteger(a, b);
 	while (!isRandomNumberValid(secondnumber)) {
@@ -22,8 +24,13 @@ function generate() {
     symbol = document.math.symbol.value;
     document.getElementById("result1").value = firstnumber + symbol + secondnumber;
     document.getElementById("youranswer").disabled = false;
-    document.getElementById("number1").disabled = true;
-	document.getElementById("number2").disabled = true;
+    //document.getElementById("number1").disabled = true;
+    //document.getElementById("number2").disabled = true;
+    }
+    else
+    {
+        alert("First number must be less than the second number");
+    }
 }
 
 function checkResult(){
@@ -71,7 +78,7 @@ function isRandomNumberValid(number)
 
 function onAnswerChange() {
 	if (document.getElementById("youranswer").value !== "") {
-		document.getElementById("fBf").disabled = false;
+		document.getElementById("Result").disabled = false;
 	}
 }
 
@@ -82,14 +89,14 @@ function checkIfMatches(firstNumber, secondNumber)
     {
         alert('true');
 		
-        localStorage.clickcount = (localStorage.clickcount) ? Number(localStorage.clickcount) + 1: 1;
-        target.innerHTML = localStorage.clickcount || 0;
+        localStorage.clickcountTrue = (localStorage.clickcountTrue) ? Number(localStorage.clickcountTrue) + 1: 1;
+        target.innerHTML = localStorage.clickcountTrue || 0;
     }
     else
     {
         alert('false');
      
-        localStorage.clickcount = (localStorage.clickcount) ? Number(localStorage.clickcount) + 1: 1;
-        target1.innerHTML = localStorage.clickcount || 0;
+        localStorage.clickcountFalse = (localStorage.clickcountFalse) ? Number(localStorage.clickcountFalse) + 1: 1;
+        target1.innerHTML = localStorage.clickcountFalse || 0;
     }
 }
