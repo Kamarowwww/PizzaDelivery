@@ -16,9 +16,9 @@
         <div class="validateInput ">
             <input type="text"  name="number1" id="number1" placeholder="min" />
             <input type="text" name="number2" id="number2" placeholder="max" />
-            <input type="text" maxlength="20" name="result1" id="result1" placeholder="equation" />
-            <input type="text" maxlength="20" name="result2" id="result2" placeholder="correct answer" />
-            <input type="text" maxlength="20" name="youranswer" id="youranswer" placeholder="your answer" />
+            <input type="text" maxlength="20" name="result1" id="result1" placeholder="equation"  disabled/>
+            <input type="text" maxlength="20" name="result2" id="result2" placeholder="correct answer" disabled />
+            <input type="text" maxlength="20" name="youranswer" id="youranswer" placeholder="your answer" onchange="onAnswerChange()" disabled />
 
         </div>
         <select name = "symbol" id="symbol">
@@ -28,10 +28,10 @@
             <option id="*">*</option>
         </select>
         <div class="buttonHolder">
-            <button type="Generate"id = "fB" onclick = "event.preventDefault; generate()">Generate</button>
+            <button type="Generate"id = "fB" onclick ="generate()" >Generate</button>
         </div>
            <div class="buttonHolder">
-                <button type="Result" id = "fBf" onclick = "event.preventDefault; result();match(); countClicks(); update()">Result</button>
+                <button type="Result" id = "fBf" onclick = "checkResult()" disabled>Result</button>
             </div>
             <p>You answered correctly <span id='target'></span> time(s).</p>
             <p>You answered wrong <span id='target1'></span> time(s).</p>
