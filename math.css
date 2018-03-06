@@ -1,0 +1,52 @@
+.form{
+    width: 35%;
+    height: 280px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px inset #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+#number1 {
+    border:5px inset #ccc;
+}
+#number2{
+    border: 5px inset #ccc;
+}
+buttonHolderGenerate{
+    background-color: blue;
+    border-radius: 8px;
+    background-color: #e7e7e7; color: rgb(116, 34, 34);
+}
+#result1{
+    border:5px inset #ccc;
+    width: 50%;
+}
+#result2{
+    border:5px inset #ccc;
+    width: 38%;
+}
+#youranswer{
+    border:5px inset #ccc;
+    width: 43.5%;
+}
+#buttonHolderResult{
+    background-color: aqua;
+}
+select{
+    border:5px inset #ccc;
+    width: 10%;
+}
+.caption{
+    font-style: oblique;
+    padding: 10px 10px 20px 175px;
+    color:blue;
+    }
+font{
+    color:blue;
+    font-style: oblique;   
+}
+p{
+    font-style: oblique;
+}
